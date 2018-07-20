@@ -1,0 +1,37 @@
+{
+  "name": "movie-reviews-app",
+  "version": "1.0.0",
+  "description": "Movie-Reviews-App using Poi - React+GraphQL",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node_modules/.bin/poi"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/IrvingArmenta/movie-reviews-app.git"
+  },
+  "keywords": [
+    "moview",
+    "reviews",
+    "app",
+    "react",
+    "graphql"
+  ],
+  "author": "Irving - Serigne",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/IrvingArmenta/movie-reviews-app/issues"
+  },
+  "homepage": "https://github.com/IrvingArmenta/movie-reviews-app#readme",
+  "devDependencies": {
+    "poi": "^10.2.9"
+  },
+  "dependencies": {
+    "aws-appsync": "^1.3.1",
+    "aws-appsync-react": "^1.1.1",
+    "react": "^16.4.1",
+    "react-apollo": "^2.1.9",
+    "react-dom": "^16.4.1",
+    "uuid": "^3.3.2"
+  }
+}
