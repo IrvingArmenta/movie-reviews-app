@@ -4,7 +4,8 @@
   "description": "Movie-Reviews-App using Poi - React+GraphQL",
   "main": "index.js",
   "scripts": {
-    "dev": "node_modules/.bin/poi"
+    "dev": "node_modules/.bin/poi",
+    "release": "node_modules/.bin/poi build"
   },
   "repository": {
     "type": "git",
@@ -25,7 +26,8 @@
   },
   "homepage": "https://github.com/IrvingArmenta/movie-reviews-app#readme",
   "devDependencies": {
-    "poi": "^10.2.9"
+    "poi": "^10.2.9",
+    "react-hot-loader": "^4.3.3"
   },
   "dependencies": {
     "aws-appsync": "^1.3.1",
