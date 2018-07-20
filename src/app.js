@@ -1,17 +1,20 @@
 import React from 'react'
 import { hot } from 'react-hot-loader'
+
+// specific element styles [css modules]
 import style from './app.module.scss'
 
+// css global styles
+import globalStyles from './common/styles/common.scss'
+
 // scss modules test
-console.log(style.mainSection);
+console.log(style.section);
 
 const App = () => {
   return(
-    <div>
-      <section className={style.mainSection}>
-      <p>Hello darkness my old friend</p>
+    <section className={style.section}>
+      <h1>Hello darkness my old friend</h1>
     </section>
-  </div>
   )
 }
 
