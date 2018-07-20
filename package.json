@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/IrvingArmenta/movie-reviews-app.git"
+    "url": "git+ssh://git@github.com-irving/IrvingArmenta/movie-reviews-app.git"
   },
   "keywords": [
     "moview",
