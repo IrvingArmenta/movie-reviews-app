@@ -15,7 +15,8 @@
     "reviews",
     "app",
     "react",
-    "graphql"
+    "graphql",
+    "poi"
   ],
   "author": "Irving - Serigne",
   "license": "MIT",
