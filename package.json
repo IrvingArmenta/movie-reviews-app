@@ -4,7 +4,7 @@
   "description": "Movie-Reviews-App using Poi - React+GraphQL",
   "main": "index.js",
   "scripts": {
-    "dev": "node_modules/.bin/poi",
+    "start": "node_modules/.bin/poi",
     "release": "node_modules/.bin/poi build"
   },
   "repository": {
