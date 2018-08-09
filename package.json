@@ -2,7 +2,7 @@
   "name": "movie-reviews-app",
   "version": "1.0.0",
   "description": "Movie-Reviews-App using Poi - React+GraphQL",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
     "start": "node_modules/.bin/poi",
     "release": "node_modules/.bin/poi build"
