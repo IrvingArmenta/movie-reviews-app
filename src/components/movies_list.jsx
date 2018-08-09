@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import styles from './movies_list.module.scss'
+
 
 export default class MoviesList extends Component {
 
@@ -13,12 +15,13 @@ export default class MoviesList extends Component {
   };
 
   handleDelete = (movie) => {
-    if (window.confirm('Are you sure ?')) {
+    if (window.confirm('Are you sure?')) {
       this.props.onDelete(movie);
     }
   };
 
   handleEdit = (movie) => {
+    // TODO - implement edit
   };
 
 
@@ -42,6 +45,7 @@ export default class MoviesList extends Component {
   render() {
     const { movies } = this.props;
     return (
+    <div>
       <table>
         <thead>
         <tr>
@@ -58,6 +62,7 @@ export default class MoviesList extends Component {
         {[].concat(movies).sort((a, b) => b.id - a.id).map(this.renderMovies)}
         </tbody>
       </table>
+    </div>
     );
   }
 }

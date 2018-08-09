@@ -1,14 +1,11 @@
 import React, {Component} from 'react'
-// import { hot } from 'react-hot-loader'
-
-// import './App.css';
+import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom'
 
 // specific element styles [css modules]
 import style from './app.module.scss'
 
 // css global styles
 import globalStyles from './common/styles/common.scss'
-
 
 const client = new AWSAppSyncClient({
   url: AppSync.graphqlEndpoint,
@@ -20,11 +17,14 @@ const client = new AWSAppSyncClient({
 });
 
 // scss modules test
-console.log(style);
+//console.log(style);
 
 // Components
 import MoviesList from "./components/movies_list";
 import CreateMovie from "./components/create_movie";
+import NotFound from "./components/not_found";
+import Head from "./components/head";
+
 
 // GraphQL
 import AWSAppSyncClient from "aws-appsync";
@@ -40,10 +40,18 @@ import UpdateMovieQuery from './queries/update_movie';
 class App extends Component {
   render() {
     return(
-      <section>
-        <AddMovieReview />
-        <ListOfReviewedMovies />
-      </section>
+      <div>
+      <Router>
+        <section className={style.section}>
+          <Head />
+          <Switch>
+            <Route exact path='/add_review' component={AddMovieReview}/>
+            <Route exact path='/' component={ListOfReviewedMovies}/>
+            <Route component={NotFound}/>
+          </Switch>
+        </section>
+      </Router>
+      </div>
     )
   }
 }
@@ -124,7 +132,7 @@ const AddMovieReview = graphql(CreateMovieQuery, {
 const WithProvider = () => (
   <ApolloProvider client={client}>
     <Rehydrated>
-      <App />
+        <App />
     </Rehydrated>
   </ApolloProvider>
 );
