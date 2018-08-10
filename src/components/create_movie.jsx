@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Textarea } from 'react-inputs-validation';
 
 export default class CreateMovie extends Component {
 
@@ -48,7 +49,9 @@ export default class CreateMovie extends Component {
           <label>Title<input type="text" placeholder="Title" value={title} onChange={this.handleChange.bind(this, 'title')} /></label>
         </div>
         <div>
-          <label>Synopsis<input type="text" placeholder="Synopsis" value={synopsis} onChange={this.handleChange.bind(this, 'synopsis')} /></label>
+          <label>Synopsis
+            <Textarea id="synopsis" placeholder="Add your synopsis" onChange={(description, e) => {this.handleChange.bind(this, 'synopsis')}} onBlur={(e) => {console.log(e)}} />
+          </label>
         </div>
         <div>
           <label>Image<input type="text" placeholder="Image" value={image} onChange={this.handleChange.bind(this, 'image')} /></label>
