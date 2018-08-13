@@ -1,4 +1,30 @@
+$rem-baseline: 10px;
+
+html {
+	@include rem-baseline;
+}
+
 #app {
-	background-color: $black;
+	background: #0F2027;
+	background: -webkit-linear-gradient(to left, #2C5364, #203A43, #0F2027);
+	background: linear-gradient(to left, #2C5364, #203A43, #0F2027);
   height: 100vh;
+}
+
+.fade-enter {
+    opacity: 0.01;
+}
+
+.fade-enter.fade-enter-active {
+    opacity: 1;
+    transition: opacity 300ms ease-in;
+}
+
+.fade-exit {
+    opacity: 1;
+}
+
+.fade-exit.fade-exit-active {
+    opacity: 0.01;
+    transition: opacity 300ms ease-in;
 }

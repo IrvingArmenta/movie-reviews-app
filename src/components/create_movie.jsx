@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Textarea } from 'react-inputs-validation';
+import { Textarea } from "react-inputs-validation";
 
 export default class CreateMovie extends Component {
 

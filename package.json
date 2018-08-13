@@ -5,7 +5,7 @@
   "main": "src/index.js",
   "scripts": {
     "start": "node_modules/.bin/poi",
-    "release": "node_modules/.bin/poi build"
+    "build": "node_modules/.bin/poi build"
   },
   "repository": {
     "type": "git",
@@ -41,7 +41,7 @@
     "react": "^16.4.1",
     "react-apollo": "^2.1.9",
     "react-dom": "^16.4.1",
-    "react-inputs-validation": "^1.0.4",
+    "react-inputs-validation": "^1.0.5",
     "uuid": "^3.3.2"
   }
 }

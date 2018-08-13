@@ -2,7 +2,7 @@ import React from "react";
 import {NavLink} from "react-router-dom"
 
 const activeClass = "nav__link--active";
-const Head = () => {
+const Header = () => {
   return(
     <header>
       <nav className="nav">
@@ -15,4 +15,4 @@ const Head = () => {
   )
 }
 
-export default Head;
+export default Header;
