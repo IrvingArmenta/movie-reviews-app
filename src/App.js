@@ -23,7 +23,7 @@ const client = new AWSAppSyncClient({
 import MoviesList from "./components/movies_list";
 import CreateMovie from "./components/create_movie";
 import NotFound from "./components/not_found";
-import Head from "./components/head";
+import Header from "./components/header";
 
 
 // GraphQL
@@ -43,10 +43,10 @@ class App extends Component {
       <div>
       <Router>
         <section className={style.section}>
-          <Head />
+          <Header />
           <Switch>
-            <Route exact path='/add_review' component={AddMovieReview}/>
-            <Route exact path='/' component={ListOfReviewedMovies}/>
+            <Route exact path='/add_review' component={AddMovieReview} />
+            <Route exact path='/' component={ListOfReviewedMovies} />
             <Route component={NotFound}/>
           </Switch>
         </section>
