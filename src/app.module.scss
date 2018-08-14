@@ -1,25 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=VT323');
+@import 'common/styles/mixins/rem';
+@import 'common/styles/general';
 
 .section {
-  background-color: #000000;
   //padding: 30px;
   color: #ffffff;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
   height: 100vh;
   width: 100%;
   font-family: 'VT323', monospace;
-
-  // .section__title
-  &__title {
-    font-size: 8.6vw;
-    font-weight: 400;
-  }
-
-}
-
-.mydog {
-  font-size: 10rem;
-  color: red;
+  font-size: rem(14px);
 }

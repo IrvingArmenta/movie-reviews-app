@@ -7,8 +7,6 @@ export default class CreateMovie extends Component {
     this.state = this.getInitialState();
   }
 
-<<<<<<< Updated upstream
-=======
   componentDidMount() {
   	// Get the components DOM node
   	var elem = ReactDOM.findDOMNode(this)
@@ -17,7 +15,6 @@ export default class CreateMovie extends Component {
     },100);
   }
 
->>>>>>> Stashed changes
   getInitialState = () => {
     return ({
       id: '',

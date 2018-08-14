@@ -8,7 +8,6 @@ import style from './app.module.scss'
 // css global styles
 import globalStyles from './common/styles/common.scss'
 
-
 const client = new AWSAppSyncClient({
   url: AppSync.graphqlEndpoint,
   region: AppSync.region,
@@ -19,11 +18,14 @@ const client = new AWSAppSyncClient({
 });
 
 // scss modules test
-console.log(style);
+//console.log(style);
 
 // Components
 import MoviesList from "./components/movies_list";
 import CreateMovie from "./components/create_movie";
+import NotFound from "./components/not_found";
+import Header from "./components/header";
+
 
 // GraphQL
 import AWSAppSyncClient from "aws-appsync";
@@ -39,10 +41,18 @@ import UpdateMovieQuery from './queries/update_movie';
 class App extends Component {
   render() {
     return(
-      <section>
-        <AddMovieReview />
-        <ListOfReviewedMovies />
-      </section>
+      <div>
+      <Router>
+        <section className={style.section}>
+          <Header />
+          <Switch>
+            <Route exact path='/add_review' component={AddMovieReview} />
+            <Route exact path='/' component={ListOfReviewedMovies} />
+            <Route component={NotFound}/>
+          </Switch>
+        </section>
+      </Router>
+      </div>
     )
   }
 }
@@ -124,7 +134,7 @@ const AddMovieReview = graphql(CreateMovieQuery, {
 const WithProvider = () => (
   <ApolloProvider client={client}>
     <Rehydrated>
-      <App />
+        <App />
     </Rehydrated>
   </ApolloProvider>
 );
