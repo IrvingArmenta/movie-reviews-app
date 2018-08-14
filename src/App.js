@@ -1,7 +1,6 @@
 import React, {Component} from 'react'
-// import { hot } from 'react-hot-loader'
-
-// import './App.css';
+import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom'
+import { withRouter } from 'react-router'
 
 // specific element styles [css modules]
 import style from './app.module.scss'
@@ -49,6 +48,7 @@ class App extends Component {
 }
 
 const ListOfReviewedMovies = compose(
+  withRouter,
   graphql(ListAllMoviesQuery, {
     options: {
       fetchPolicy: 'cache-and-network'

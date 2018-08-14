@@ -1,0 +1,21 @@
+$rem-baseline: 10px;
+
+html {
+	@include rem-baseline;
+}
+
+#app {
+	background: #0F2027;
+	background: -webkit-linear-gradient(to left, #2C5364, #203A43, #0F2027);
+	background: linear-gradient(to left, #2C5364, #203A43, #0F2027);
+  height: 100vh;
+}
+
+fieldset {
+	opacity: 0;
+	transition: all 400ms ease-in-out;
+}
+
+.component-reveal {
+	opacity: 1;
+}
