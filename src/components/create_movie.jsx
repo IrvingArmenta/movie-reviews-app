@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import ReactDOM from 'react-dom';
 
 export default class CreateMovie extends Component {
 
@@ -11,7 +12,7 @@ export default class CreateMovie extends Component {
   	// Get the components DOM node
   	var elem = ReactDOM.findDOMNode(this)
     setTimeout(function(){
-        elem.classList.add("component-reveal");
+        elem.classList.add("component--reveal");
     },100);
   }
 
@@ -47,7 +48,7 @@ export default class CreateMovie extends Component {
   render() {
     const { id, title, synopsis, image, year, cast, ratings, } = this.state;
     return (
-      <fieldset className="hey">
+      <fieldset className="component--hidden component">
         <legend>Add New Movie Review</legend>
         <div>
           <label>ID<input type="text" placeholder="ID" value={id} onChange={this.handleChange.bind(this, 'id')} /></label>
