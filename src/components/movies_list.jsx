@@ -3,7 +3,7 @@ import styles from './movies_list.module.scss'
 import Grid from 'mauerwerk'
 import Media from "react-media";
 
-const MoviesGrid = ({ movies, columns }) =>  (
+const MoviesGrid = ({ movies, columns, test }) =>  (
     <Grid
       className="grid"
       // Arbitrary data, should contain keys, possibly heights, etc.
@@ -26,11 +26,19 @@ const MoviesGrid = ({ movies, columns }) =>  (
               <p>{data.synopsis}</p>
               <p><img src={data.image} /></p>
               <p>{data.year}</p>
-              <p>{data.cast}</p>
+              <ul>
+                {
+                  data.cast.map((el) => {
+                    return <li key={el}>{el}</li>
+                  })
+                }
+              </ul>
               <p>{data.ratings}</p>
+              <button onClick={test}>test</button>
           </div>
           }
           <button onClick={toggle}>{open ? 'Close' : 'Open'}</button>
+
         </div>
       )}
     </Grid>
@@ -59,12 +67,17 @@ class MoviesList extends Component {
     // TODO - implement edit
   };
 
+  test = () => {
+    alert("I am an alert box!");
+  };
+
   render() {
     const { movies } = this.props;
+    console.log(movies);
     return (
         <Media query="(min-width: 767px)">
           {matches =>
-            <MoviesGrid movies={movies} columns={matches ? (4) : (1)} />
+            <MoviesGrid movies={movies} columns={matches ? (4) : (1)} test={ this.test } />
           }
       </Media>
     );
