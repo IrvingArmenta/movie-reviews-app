@@ -5,14 +5,15 @@ html {
 }
 
 #app {
-	background: #0F2027;
-	background: -webkit-linear-gradient(to left, #2C5364, #203A43, #0F2027);
-	background: linear-gradient(to left, #2C5364, #203A43, #0F2027);
+	background: #232526;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to top, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to top, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
   height: 100vh;
 }
 
 .component {
-	transition: all 400ms ease-in-out;
+	transition: all 300ms ease-in-out;
 }
 
 .component--hidden {
@@ -21,4 +22,17 @@ html {
 
 .component--reveal {
 	opacity: 1;
+}
+
+.grid-wrap {
+	height: calc(100vh - 60px); // 60px is the height of the header
+}
+
+button {
+	cursor: pointer;
+}
+
+header {
+	position: relative;
+	z-index: 8;
 }
